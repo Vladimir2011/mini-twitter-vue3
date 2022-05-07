@@ -29,6 +29,7 @@ export default {
           body: 'hello vue 3',
           avatar: `https://avatars.dicebear.com/api/male/john.svg`,
           likes: 12,
+          isLiked: false,
           date: new Date(Date.now()).toLocaleString()
         },
         {
@@ -36,6 +37,7 @@ export default {
           body: 'hello world',
           avatar: `https://avatars.dicebear.com/api/female/2.svg`,
           likes: 8,
+          isLiked: false,
           date: new Date(Date.now()).toLocaleString()
         }
       ]

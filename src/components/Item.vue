@@ -9,7 +9,11 @@
           <span>{{ item.date }}</span>
         </div>
         <div>{{ item.body }}</div>
-        <div class="like">
+        <div
+            @click="likeTweet"
+            class="like"
+            :class="{'is-liked' : isLiked}"
+        >
           <div class="icon">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -36,10 +40,27 @@
 
 <script>
 export default {
+  data () {
+    return {
+      isLiked: false
+    }
+  },
+
   props: {
     item: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    likeTweet () {
+      if (this.isLiked) {
+        this.isLiked = false
+        this.item.likes--
+      } else {
+        this.isLiked = true
+        this.item.likes++
+      }
     }
   }
 }
