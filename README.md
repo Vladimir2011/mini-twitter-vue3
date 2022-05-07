@@ -1,4 +1,6 @@
-# twitter
+# Twitter
+
+## Мелкое приложение для прокачки навыков использования Vue-cli, Vue 3, Vue Composition API
 
 ## Project setup
 ```
